@@ -121,16 +121,15 @@ ul {
   font-weight: var(--title-font-weight);
   line-height: 1.5;
   padding: 0 6px;
+  transition: color var(--animation-duration) var(--transition-timing-function);
 }
 
 .navigation-link:hover {
   color: var(--slate-color);
-  transition: color var(--animation-duration) var(--transition-timing-function);
 }
 
 .navigation-link:focus {
   color: var(--brand-color);
-  transition: color var(--animation-duration) var(--transition-timing-function);
 }
 
 .navigation-item.active .navigation-link {
@@ -156,22 +155,22 @@ header .contacts-link {
   display: flex;
   column-gap: 10px;
   align-items: center;
+  transition: color var(--animation-duration) var(--transition-timing-function);
 }
 
 header .contacts-link:hover,
 header .contacts-link:focus {
-  color: var(--slate-color);
-  transition: color var(--animation-duration) var(--transition-timing-function);
+  color: var(--brand-color);
 }
 
 header .contacts-icon {
   fill: var(--slate-color);
+  transition: fill var(--animation-duration) var(--transition-timing-function);
 }
 
 header .contacts-link:hover .contacts-icon,
 header .contacts-link:focus .contacts-icon {
   fill: var(--brand-color);
-  transition: fill var(--animation-duration) var(--transition-timing-function);
 }
 
 .logo a {
@@ -213,19 +212,17 @@ header .contacts-link:focus .contacts-icon {
   letter-spacing: 0.04em;
   cursor: pointer;
   line-height: 1.2;
+  transition-property: backgound-color, box-shadow;
+  transition: var(--animation-duration) var(--transition-timing-function);
 }
 
 .top-block-order-button:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition: box-shadow var(--animation-duration)
-    var(--transition-timing-function);
 }
 
 .top-block-order-button:focus {
   background-color: var(--active-color);
-  transition: backgound-color var(--animation-duration)
-    var(--transition-timing-function);
 }
 
 .features {
@@ -360,6 +357,8 @@ header .contacts-link:focus .contacts-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color var(--animation-duration)
+    var(--transition-timing-function);
 }
 
 .our-team-social-icon svg {
@@ -400,23 +399,23 @@ header .contacts-link:focus .contacts-icon {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: border-color var(--animation-duration)
+    var(--transition-timing-function);
 }
 
 .customers-link:hover,
 .customers-link:focus {
   border: 1px solid var(--brand-color);
-  transition: border-color var(--animation-duration)
-    var(--transition-timing-function);
 }
 
 .customers-link .customers-icon {
   fill: var(--light-slate-color);
+  transition: fill var(--animation-duration) var(--transition-timing-function);
 }
 
 .customers-link:hover .customers-icon,
 .customers-link:focus .customers-icon {
   fill: var(--brand-color);
-  transition: fill var(--animation-duration) var(--transition-timing-function);
 }
 
 /* Portfolio */
@@ -451,6 +450,8 @@ header .contacts-link:focus .contacts-icon {
   padding: 12px 24px;
   cursor: pointer;
   color: var(--brand-color);
+  transition-property: background-color, color, box-shadow, border-color;
+  transition: var(--animation-duration) var(--transition-timing-function);
 }
 
 .filter-button.active,
@@ -461,12 +462,6 @@ header .contacts-link:focus .contacts-icon {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border: 1px solid rgb(0 0 0 / 0);
-}
-
-.filter-button:hover,
-.filter-button:focus {
-  transition-property: background-color, color, box-shadow, border-color;
-  transition: var(--animation-duration) var(--transition-timing-function);
 }
 
 /* Project cards */
@@ -502,13 +497,13 @@ header .contacts-link:focus .contacts-icon {
   flex-direction: column;
   border: 0.5px solid var(--cloud-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  transition: box-shadow var(--animation-duration)
+    var(--transition-timing-function);
 }
 
 .project-cards-inner:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition: box-shadow var(--animation-duration)
-    var(--transition-timing-function);
 }
 
 .project-cards-top {
@@ -531,11 +526,14 @@ header .contacts-link:focus .contacts-icon {
   font-size: 16px;
   line-height: 1.5;
   background-color: var(--brand-color);
+  bottom: 0;
+  transform: translateY(100%);
+  transition: transform var(--animation-duration)
+    var(--transition-timing-function);
 }
 
 .project-cards-inner:hover .project-cards-back {
-  bottom: 0;
-  transition: bottom var(--animation-duration) var(--transition-timing-function);
+  transform: translateY(0);
 }
 
 .project-cards-text {
@@ -608,6 +606,8 @@ footer .footer-text {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: background-color var(--animation-duration)
+    var(--transition-timing-function);
 }
 
 .footer-social-icon svg {
@@ -617,8 +617,6 @@ footer .footer-text {
 .footer-social-icon:hover,
 .footer-social-icon:focus {
   background-color: var(--green);
-  transition: background-color var(--animation-duration)
-    var(--transition-timing-function);
 }
 
 /* Modal window */
@@ -632,8 +630,9 @@ footer .footer-text {
   background-color: rgb(46 47 66 / 0.4);
   z-index: 1;
   opacity: 1;
-  transition: opacity var(--animation-duration)
-    var(--transition-timing-function);
+  visibility: visible;
+  transition-property: visibility, opacity;
+  transition: var(--animation-duration) var(--transition-timing-function);
 }
 
 .modal-window {
@@ -653,6 +652,8 @@ footer .footer-text {
 
 .backdrop.is-hidden .modal-window {
   transform: scale(0.7);
+  transition: transform var(--animation-duration)
+    var(--transition-timing-function);
 }
 
 .modal-window-close {
@@ -668,19 +669,23 @@ footer .footer-text {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: box-shadow var(--animation-duration)
+    var(--transition-timing-function);
+}
+
+.modal-window-close svg {
+  color: #000;
 }
 
 .modal-window-close:hover {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  transition: box-shadow var(--animation-duration)
-    var(--transition-timing-function);
 }
 
 .is-hidden {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--animation-duration)
-    var(--transition-timing-function);
+  transition-property: visibility, opacity;
+  transition: var(--animation-duration) var(--transition-timing-function);
 }
